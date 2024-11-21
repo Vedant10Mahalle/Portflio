@@ -1,0 +1,251 @@
+/* Custom CSS */
+body {
+    background-color: black;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar a.active {
+    color: #FFCC70;
+    font-weight: bold;
+}
+
+/* Shining Header Effect */
+.shine-text {
+    background: linear-gradient(45deg, #ff00b3, #ffcc00, #00ffff);
+    background-size: 300%;
+    color: transparent;
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 300% 0;
+    }
+    50% {
+        background-position: -300% 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Social Media Icons */
+.social-icon img {
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4158D0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #C850C0;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 0px;
+    position: static;
+    justify-content: center;
+    background-color: #1a202c;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Flexbox for side-by-side card layout */
+#projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card Styling */
+#projects .card {
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px; /* Limit max width of each card */
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects .card img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #444;
+}
+
+#projects .card-body {
+    background-color: #2d3748;
+    padding: 50%;
+}
+
+#projects .card-title {
+    font-size: 1.5rem;
+    color: #FFCC70;
+}
+
+#projects .card-text {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+#projects .btn-primary {
+    background-color: #4158D0;
+    color: white;
+    border: none;
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#projects .btn-primary:hover {
+    background-color: #C850C0;
+}
+
+/* Hover Effect on Cards */
+#projects .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout - Stacks the cards on smaller screens */
+@media (max-width: 768px) {
+    #projects .row {
+        flex-direction: column; /* Stack the cards on smaller screens */
+        gap: 20px;
+    }
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background-color: #1a202c;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Skills List */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+#skills ul li {
+    background-color: #2d3748;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between icon and text */
+}
+
+#skills ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#skills ul li i {
+    font-size: 3rem;
+    color: #FFCC70; /* Color for icons */
+}
+
+#skills ul li span {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Skills Category */
+#skills .category-title {
+    font-size: 1.5rem;
+    color: #FFCC70;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #skills ul {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #skills ul {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
